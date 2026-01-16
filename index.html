@@ -3,17 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Aditta Barua</title>
+    <title>Aditta Barua | Cyber Security Specialist & Researcher</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+        /* SVG Icons Styling */
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(255, 0, 110, 0.2));
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.3);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.4), rgba(255, 0, 110, 0.4));
+            border-color: #00d4ff;
+        }
+        
+        .social-icons svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+        
         /* Custom Styles */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Cyber Security color scheme */
+        :root {
+            --primary: #00d4ff; /* Cyan */
+            --primary-dark: #0099cc;
+            --secondary: #ff006e; /* Neon pink */
+            --accent: #8000ff; /* Purple */
+            --dark-bg: #0a0e27;
+            --darker-bg: #05070f;
+            --card-bg: #0f1429;
+        }
+        
+        .gradient-cyan-pink {
+            background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00d4ff 0%, #8000ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tech-glow {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .tech-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+            transition: all 0.3s ease;
         }
         .section {
             padding: 3rem 0;
@@ -41,98 +112,230 @@
         }
         /* Dark mode styles */
         .dark {
-            background-color: #0d1117; /* GitHub dark bg */
-            color: #c9d1d9; /* GitHub dark text */
+            background-color: #05070f;
+            color: #e0e7ff;
         }
         .dark .bg-gray-100 {
-            background-color: #0d1117;
+            background-color: #05070f;
         }
         .dark .bg-white {
-            background-color: #161b22; /* GitHub dark card bg */
+            background-color: #0f1429;
         }
         .dark .text-gray-800 {
-            color: #f0f6fc; /* Lighter text for headings */
+            color: #00d4ff;
         }
         .dark .text-gray-600 {
-            color: #8b949e; /* Muted text */
+            color: #a0aec0;
         }
         .dark .text-teal-600 {
-            color: #58a6ff; /* Use a nice blue for links, common in dark themes */
+            color: #00d4ff;
         }
         .dark .border-t-teal-500 {
-             border-top-color: #58a6ff;
+             border-top-color: #00d4ff;
         }
         .dark .section {
-            border-bottom-color: #21262d; /* Darker border */
+            border-bottom-color: #1a2344;
         }
         .dark .bg-gray-50 {
-             background-color: #161b22;
+             background-color: #0f1429;
         }
         .dark .bg-gray-700 {
-            background-color: #21262d;
+            background-color: #1a2344;
         }
         .dark .card {
-            background-color: #21262d;
+            background-color: #0f1429;
+        }
+        
+        /* Cyber niche specific */
+        .security-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #00d4ff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(128, 0, 255, 0.15));
+            border: 1px solid rgba(0, 212, 255, 0.5);
+            border-radius: 0.5rem;
+            color: #00d4ff;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 antialiased dark">
+    <!-- SVG Icons Definition -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
+        <symbol id="icon-linkedin" viewBox="0 0 40 40"><path d="M12.1,13.8v19.1H5.7V13.8C5.7,13.8,12.1,13.8,12.1,13.8z M12.5,7.9c0,0.9-0.3,1.7-1,2.4c-0.7,0.6-1.5,0.9-2.6,0.9h0 c-1.1,0-1.9-0.3-2.5-0.9c-0.6-0.6-1-1.4-1-2.4c0-1,0.3-1.7,1-2.4S7.9,4.6,9,4.6s1.9,0.3,2.6,0.9S12.5,6.9,12.5,7.9z M35,22v11h-6.4 V22.7c0-1.4-0.3-2.4-0.8-3.2c-0.5-0.8-1.3-1.1-2.4-1.1c-0.8,0-1.5,0.2-2,0.7c-0.5,0.4-1,1-1.2,1.7c-0.1,0.4-0.2,0.9-0.2,1.6v10.7 h-6.4c0-5.1,0-9.3,0-12.5s0-5.1,0-5.7l0-0.9H22v2.8h0c0.3-0.4,0.5-0.8,0.8-1.1c0.3-0.3,0.6-0.6,1.1-1c0.5-0.4,1-0.6,1.7-0.8 c0.7-0.2,1.4-0.3,2.2-0.3c2.2,0,4,0.7,5.3,2.2C34.4,17,35,19.1,35,22L35,22z"></path></symbol>
+        <symbol id="icon-github" viewBox="0 0 40 40"><path d="M36,20.3c0,3.5-1,6.6-3.1,9.4c-2,2.8-4.7,4.7-7.9,5.8c-0.4,0.1-0.6,0-0.8-0.1c-0.2-0.2-0.3-0.4-0.3-0.6v-4.4 c0-1.3-0.4-2.3-1.1-3c0.8-0.1,1.5-0.2,2.1-0.4c0.6-0.2,1.3-0.4,2-0.8c0.7-0.4,1.2-0.8,1.7-1.4c0.5-0.5,0.8-1.3,1.1-2.2 s0.4-2,0.4-3.1c0-1.7-0.5-3.1-1.6-4.3c0.5-1.3,0.5-2.7-0.2-4.2c-0.4-0.1-1,0-1.7,0.2c-0.7,0.3-1.4,0.6-1.9,0.9L24,12.5 c-1.3-0.4-2.6-0.5-4-0.5s-2.7,0.2-4,0.5c-0.2-0.2-0.5-0.3-0.9-0.6c-0.4-0.2-0.9-0.5-1.7-0.8c-0.8-0.3-1.4-0.4-1.8-0.3 c-0.6,1.6-0.7,3-0.1,4.2c-1.1,1.2-1.6,2.6-1.6,4.3c0,1.2,0.1,2.2,0.4,3.1s0.6,1.6,1.1,2.2s1,1,1.7,1.4c0.7,0.4,1.3,0.6,2,0.8 c0.6,0.2,1.3,0.3,2.1,0.4c-0.6,0.5-0.9,1.2-1,2.1c-0.3,0.1-0.6,0.2-0.9,0.3c-0.3,0.1-0.7,0.1-1.2,0.1c-0.5,0-0.9-0.1-1.4-0.4 c-0.5-0.3-0.8-0.7-1.2-1.3c-0.3-0.4-0.6-0.8-1-1.1c-0.4-0.3-0.8-0.4-1-0.5L9,26.5c-0.3,0-0.5,0-0.6,0.1c-0.1,0.1-0.1,0.1-0.1,0.2 c0,0.1,0.1,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.2l0.1,0.1c0.3,0.1,0.6,0.4,0.9,0.8s0.5,0.7,0.7,1.1l0.2,0.5c0.2,0.5,0.5,1,0.9,1.3 c0.4,0.3,0.9,0.5,1.4,0.6c0.5,0.1,1,0.1,1.4,0.1c0.5,0,0.9,0,1.2-0.1l0.5-0.1c0,0.5,0,1.1,0,1.9c0,0.7,0,1.1,0,1.1 c0,0.2-0.1,0.5-0.3,0.6c-0.2,0.2-0.5,0.2-0.8,0.1c-3.2-1.1-5.8-3-7.9-5.8S4,23.8,4,20.3c0-2.9,0.7-5.6,2.1-8S9.5,7.8,12,6.4 s5.1-2.1,8-2.1s5.6,0.7,8,2.1s4.4,3.4,5.8,5.8S36,17.4,36,20.3L36,20.3z"></path></symbol>
+        <symbol id="icon-facebook" viewBox="0 0 40 40"><path d="M38,20.1c0-9.9-8.1-18-18-18S2,10.1,2,20.1s5.8,15.5,13.7,17.5v-12h-3.7v-5.5h3.7v-2.4c0-6.1,2.8-9,8.8-9s3.1.2,3.9.4v5c-.4,0-1.2,0-2.1,0-3,0-4.1,1.1-4.1,4v1.9h5.9l-1,5.5h-4.9v12.4c8.9-1.1,15.8-8.7,15.8-17.9Z"></path></symbol>
+        <symbol id="icon-instagram" viewBox="0 0 40 40"><path d="M20,7c4.2,0,4.7,0,6.3,0.1c1.5,0.1,2.3,0.3,3,0.5C30,8,30.5,8.3,31.1,8.9c0.5,0.5,0.9,1.1,1.2,1.8c0.2,0.5,0.5,1.4,0.5,3 C33,15.3,33,15.8,33,20s0,4.7-0.1,6.3c-0.1,1.5-0.3,2.3-0.5,3c-0.3,0.7-0.6,1.2-1.2,1.8c-0.5,0.5-1.1,0.9-1.8,1.2 c-0.5,0.2-1.4,0.5-3,0.5C24.7,33,24.2,33,20,33s-4.7,0-6.3-0.1c-1.5-0.1-2.3-0.3-3-0.5C10,32,9.5,31.7,8.9,31.1 C8.4,30.6,8,30,7.7,29.3c-0.2-0.5-0.5-1.4-0.5-3C7,24.7,7,24.2,7,20s0-4.7,0.1-6.3c0.1-1.5,0.3-2.3,0.5-3C8,10,8.3,9.5,8.9,8.9 C9.4,8.4,10,8,10.7,7.7c0.5-0.2,1.4-0.5,3-0.5C15.3,7.1,15.8,7,20,7z M20,4.3c-4.3,0-4.8,0-6.5,0.1c-1.6,0-2.8,0.3-3.8,0.7 C8.7,5.5,7.8,6,6.9,6.9C6,7.8,5.5,8.7,5.1,9.7c-0.4,1-0.6,2.1-0.7,3.8c-0.1,1.7-0.1,2.2-0.1,6.5s0,4.8,0.1,6.5 c0,1.6,0.3,2.8,0.7,3.8c0.4,1,0.9,1.9,1.8,2.8c0.9,0.9,1.7,1.4,2.8,1.8c1,0.4,2.1,0.6,3.8,0.7c1.6,0.1,2.2,0.1,6.5,0.1 s4.8,0,6.5-0.1c1.6-0.1,2.9-0.3,3.8-0.7c1-0.4,1.9-0.9,2.8-1.8c0.9-0.9,1.4-1.7,1.8-2.8c0.4-1,0.6-2.1,0.7-3.8 c0.1-1.6,0.1-2.2,0.1-6.5s0-4.8-0.1-6.5c-0.1-1.6-0.3-2.9-0.7-3.8c-0.4-1-0.9-1.9-1.8-2.8c-0.9-0.9-1.7-1.4-2.8-1.8 c-1-0.4-2.1-0.6-3.8-0.7C24.8,4.3,24.3,4.3,20,4.3L20,4.3L20,4.3z"></path><path d="M20,11.9c-4.5,0-8.1,3.7-8.1,8.1s3.7,8.1,8.1,8.1s8.1-3.7,8.1-8.1S24.5,11.9,20,11.9z M20,25.2c-2.9,0-5.2-2.3-5.2-5.2 s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S22.9,25.2,20,25.2z"></path><path d="M30.6,11.6c0,1-0.8,1.9-1.9,1.9c-1,0-1.9-0.8-1.9-1.9s0.8-1.9,1.9-1.9C29.8,9.7,30.6,10.5,30.6,11.6z"></path></symbol>
+        <symbol id="icon-email" viewBox="0 0 40 40"><path d="M34.9,30.5V15.6c-0.4,0.4-0.8,0.9-1.4,1.2c-3.4,2.7-6.2,4.8-8.2,6.6c-0.6,0.5-1.1,0.9-1.6,1.2c-0.4,0.3-0.9,0.6-1.7,0.9 c-0.7,0.3-1.4,0.5-2,0.5l0,0c-0.6,0-1.2-0.2-2-0.5c-0.7-0.3-1.2-0.6-1.7-0.9c-0.4-0.3-0.9-0.7-1.6-1.2c-2.1-1.7-4.8-3.8-8.2-6.6 c-0.5-0.4-0.9-0.8-1.4-1.2v14.9c0,0.2,0.1,0.3,0.2,0.4C5.7,31,5.9,31.1,6,31.1h28.4c0.2,0,0.3-0.1,0.4-0.2 C34.8,30.8,34.9,30.7,34.9,30.5L34.9,30.5z M34.9,10.2V9.7c0,0,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2c-0.1,0-0.1,0-0.1-0.2 c0-0.1-0.1-0.2-0.2-0.1c-0.1,0-0.2,0-0.3,0H5.8C5.6,8.9,5.4,9,5.3,9.1C5.2,9.2,5.1,9.3,5.1,9.5c0,2.2,0.9,4,2.8,5.5 c2.5,2,5.1,4,7.7,6.1c0.1,0.1,0.3,0.2,0.7,0.5c0.4,0.3,0.6,0.5,0.9,0.7c0.2,0.2,0.5,0.4,0.8,0.6c0.3,0.2,0.7,0.4,0.9,0.5 c0.3,0.1,0.6,0.2,0.8,0.2l0,0c0.2,0,0.5-0.1,0.8-0.2c0.3-0.1,0.6-0.3,0.9-0.5c0.3-0.2,0.6-0.4,0.8-0.6c0.2-0.2,0.5-0.4,0.9-0.7 c0.4-0.3,0.6-0.5,0.6-0.5c2.7-2.1,5.3-4.2,7.7-6.1c0.7-0.5,1.4-1.2,2-2.2C34.6,11.8,34.9,11,34.9,10.2L34.9,10.2z M37.3,9.5v21 c0,0.8-0.3,1.6-0.9,2.2s-1.4,0.9-2.2,0.9H5.8c-0.8,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.4-0.9-2.2v-21c0-0.8,0.3-1.6,0.9-2.2 s1.4-0.9,2.2-0.9h28.4c0.8,0,1.6,0.3,2.2,0.9S37.3,8.7,37.3,9.5z"></path></symbol>
+    </svg>
 
     <main class="pt-16 md:pt-24">
-        <!-- New Centered Header -->
-        <section id="home" class="container mx-auto px-6 pb-12 max-w-4xl">
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 text-center border-t-4 border-teal-500 animate__animated animate__fadeInDown">
-                <img src="addi.jpg" alt="Aditta Barua" class="rounded-full w-32 h-32 md:w-36 md:h-36 object-cover border-4 border-white dark:border-gray-700 shadow-md mx-auto -mt-24 md:-mt-28">
-                <h1 class="text-4xl md:text-5xl font-bold mt-4 text-gray-800">ADITTA BARUA</h1>
-                <p class="text-lg md:text-xl text-gray-600 font-medium mb-6">Cyber Security Graduate | SOC | Web Developer | AI Researcher | Graphic Designer | Video Editor | IT Specialist | Mobile Device Technician </p>
-                <div id="action-buttons" class="flex justify-center items-center flex-wrap gap-4">
-                    <a href="https://adittabarua.carrd.co/" class="bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 dark:bg-blue-600 dark:hover:bg-blue-700 transition duration-300 shadow-md">
-                        Contact Me
-                    </a>
-                    <a href="CV_AdittaBarua.pdf" download="CV_AdittaBarua.pdf" id="download-pdf-btn" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700 transition duration-300 shadow-md">
-                        Download PDF Resume
-                    </a>
+        <!-- Redesigned Hero Section -->
+        <section id="home" class="container mx-auto px-6 pb-20 max-w-5xl">
+            <div class="gradient-cyan-pink rounded-2xl p-1 tech-glow mb-12">
+                <div class="bg-gradient-to-br from-[#0a0e27] to-[#05070f] rounded-2xl p-8 md:p-16 text-center">
+                    <div class="mb-8">
+                        <span class="security-badge">Master's in Cyber Security</span>
+                    </div>
+                    
+                    <img src="addi.jpg" alt="Aditta Barua" class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-cyan-400 shadow-lg mx-auto mb-8 tech-glow">
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                        <span class="gradient-text">ADITTA BARUA</span>
+                    </h1>
+                    
+                    <h2 class="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-6">
+                        Cyber Security Specialist | IoT Threat Detection Researcher
+                    </h2>
+                    
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto">
+                        Master's graduate specializing in <strong>Machine Learning for threat detection</strong> and <strong>IoT security</strong>. 
+                        Combining deep technical expertise in cybersecurity with creative problem-solving abilities. 
+                        Experienced in SOC operations, penetration testing, and security research.
+                    </p>
+                    
+                    <!-- Primary Skills Highlight -->
+                    <div class="mb-10 space-y-3">
+                        <p class="text-sm text-gray-400 uppercase tracking-wider">Key Focus Areas</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="skill-tag">Threat Detection</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">IoT Security</span>
+                            <span class="skill-tag">Network Security</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div id="action-buttons" class="flex justify-center items-center flex-wrap gap-4 mb-10">
+                        <a href="#research" class="bg-gradient-to-r from-cyan-500 to-cyan-400 text-black font-bold py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-flask-vial mr-2"></i>View Research
+                        </a>
+                        <a href="CV_AdittaBarua.pdf" download="CV_AdittaBarua.pdf" class="border-2 border-cyan-400 text-cyan-400 font-bold py-3 px-8 rounded-lg hover:bg-cyan-400/10 transition duration-300">
+                            <i class="fas fa-download mr-2"></i>Download CV
+                        </a>
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/aditta-barua/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg aria-labelledby="icon-linkedin-title"><title id="icon-linkedin-title">LinkedIn</title><use xlink:href="#icon-linkedin"></use></svg>
+                        </a>
+                        <a href="https://github.com/SquarePants21" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <svg aria-labelledby="icon-github-title"><title id="icon-github-title">GitHub</title><use xlink:href="#icon-github"></use></svg>
+                        </a>
+                        <a href="https://www.facebook.com/me.aditta.barua" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <svg aria-labelledby="icon-facebook-title"><title id="icon-facebook-title">Facebook</title><use xlink:href="#icon-facebook"></use></svg>
+                        </a>
+                        <a href="https://www.instagram.com/a_d_i_t_t_a_0_0/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg aria-labelledby="icon-instagram-title"><title id="icon-instagram-title">Instagram</title><use xlink:href="#icon-instagram"></use></svg>
+                        </a>
+                        <a href="mailto:adittabarua854@gmail.com" title="Email">
+                            <svg aria-labelledby="icon-email-title"><title id="icon-email-title">Email</title><use xlink:href="#icon-email"></use></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main CV Body Wrapper - Single Column Layout -->
-        <div class="container mx-auto px-6 max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12">
+        <!-- Main CV Body Wrapper -->
+        <div class="container mx-auto px-6 max-w-5xl bg-gradient-to-br from-[#0f1429] to-[#0a0e27] rounded-2xl shadow-2xl p-8 md:p-12">
 
-            <!-- Profile Section -->
+            <!-- Profile Section - Redesigned for Security Focus -->
             <section id="about" class="section animated-section">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Profile</h2>
-                <div class="card p-5 rounded-lg">
-                    <p class="text-gray-600 leading-relaxed">
-                        A multi-talented professional blending a strong foundation in Computer Science and Cyber Security with a creative flair for design and media. As a Cybersecurity Graduate, Web Developer, and AI Researcher, I bring a robust technical skill set and a passion for solving complex problems. Besides having hands on experience in repairing, troubleshooting and fixing all sorts of electronic devices especially phones, laptops is a plus for me to move forward. This is complemented by my hands-on experience as a Graphic Designer and Video Editor, allowing me to approach projects with both analytical precision and creative vision. I am a quick learner, dedicated to continuous improvement, and eager to contribute my diverse expertise to dynamic projects where technology and creativity intersect.
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">About Me</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                <div class="card p-6 rounded-lg border border-cyan-500/30 bg-opacity-50">
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        A <strong>Master's graduate in Cyber Security</strong> with specialized expertise in <strong>machine learning-driven threat detection</strong> and <strong>IoT security</strong>. 
+                        My research focuses on developing intelligent security systems to identify and mitigate emerging threats in interconnected environments.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Beyond research, I have practical SOC experience, hands-on penetration testing skills, and a passion for building secure systems. 
+                        I complement my technical expertise with creative design and communication skills, enabling me to translate complex security concepts into actionable insights.
                     </p>
                 </div>
             </section>
 
-            <!-- Experience Section -->
-            <section id="experience" class="section animated-section">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Work Experience</h2>
-                <div class="card p-5 rounded-lg">
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Shop Manager and IT Technician <span class="text-lg font-normal text-gray-600">| TechPoint</span></h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Hornchurch, Essex</p>
-                            <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Working as a manager and technician in a tech shop.</li>
-                            </ul>
+            <!-- Education Section - Moved up -->
+            <section id="education" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Education</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                <div class="card p-6 rounded-lg border border-cyan-500/30">
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-cyan-500/20">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="text-xl font-bold text-cyan-400">Masters of Science</h3>
+                                <span class="text-xs text-gray-400 bg-cyan-500/10 px-3 py-1 rounded-full">Current</span>
+                            </div>
+                            <p class="text-pink-400 font-semibold mb-1">Computer Forensics and Cyber Security</p>
+                            <p class="text-gray-400">University of Greenwich — London, England</p>
+                            <p class="text-sm text-gray-500 mt-2">Jan 2025 - Jan 2026</p>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Sales Assistant and IT Technician <span class="text-lg font-normal text-gray-600">| Tiktech</span></h3>
-                             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Hornchurch, Essex</p>
-                             <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Worked as a sales assistant and an IT specialist/technician in a tech shop environment.</li>
-                            </ul>
+                        <div class="pb-6 border-b border-cyan-500/20">
+                            <h3 class="text-xl font-bold text-cyan-400 mb-1">Bachelor of Science</h3>
+                            <p class="text-pink-400 font-semibold mb-1">Computer Science and Engineering</p>
+                            <p class="text-gray-400">BRAC University — Dhaka, Bangladesh</p>
+                            <p class="text-sm text-gray-500 mt-2">Spring 2020 - Spring 2024</p>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Graphics Designer <span class="text-lg font-normal text-gray-600">| Avalanche Digital</span></h3>
-                             <ul class="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Worked as a part-time graphics designer in an agency.</li>
-                            </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research & Expertise Section - NEW PRIORITY -->
+            <section id="research" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Research & Expertise</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                
+                <!-- Primary Expertise -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Primary Research Areas</h3>
+                    <div class="space-y-4">
+                        <div class="card p-4 rounded-lg border border-cyan-500/30 bg-opacity-50">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-shield-alt text-pink-500 text-2xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-cyan-400 mb-1">IoT Threat Detection & Machine Learning</h4>
+                                    <p class="text-gray-300 text-sm">Developing intelligent systems to detect and classify IoT security threats using advanced ML algorithms</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-4 rounded-lg border border-cyan-500/30 bg-opacity-50">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-lock text-pink-500 text-2xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-cyan-400 mb-1">Network & Infrastructure Security</h4>
+                                    <p class="text-gray-300 text-sm">Analyzing vulnerabilities and designing secure network architectures for modern enterprises</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-4 rounded-lg border border-cyan-500/30 bg-opacity-50">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-microscope text-pink-500 text-2xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-cyan-400 mb-1">Digital Forensics & Incident Response</h4>
+                                    <p class="text-gray-300 text-sm">Investigating security incidents and extracting digital evidence for forensic analysis</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,214 +343,329 @@
 
             <!-- Technical Skills Section -->
             <section id="skills" class="section animated-section">
-                 <h2 class="text-3xl font-bold mb-6 text-gray-800">Areas of Expertise</h2>
-                 <div class="card p-5 rounded-lg">
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Cyber Security</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Web Development</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">AI Research</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Graphic Design</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Video Editing</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Java</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Python</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Microsoft Office</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Adobe Photoshop</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Adobe Premier Pro</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Adobe Illustrator</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Phone Repair</span>
-                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-lg dark:bg-blue-900/50 dark:text-blue-300">Troubleshooting</span>
-                    </div>
+                 <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Technical Skills</h2>
+                 <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                 
+                 <div class="grid md:grid-cols-2 gap-8 mb-8">
+                     <!-- Security Tools & Technologies -->
+                     <div class="card p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                            <i class="fas fa-shield-alt"></i> Security & Forensics
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">SIEM Tools</span>
+                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag">Network Analysis</span>
+                            <span class="skill-tag">Vulnerability Assessment</span>
+                            <span class="skill-tag">Threat Modeling</span>
+                        </div>
+                     </div>
+                     
+                     <!-- Programming & Development -->
+                     <div class="card p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                            <i class="fas fa-code"></i> Programming & ML
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                     </div>
+                 </div>
+                 
+                 <div class="grid md:grid-cols-2 gap-8">
+                     <!-- Platforms & Tools -->
+                     <div class="card p-6 rounded-lg border border-cyan-500/30">
+                        <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                            <i class="fas fa-tools"></i> Tools & Platforms
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Splunk</span>
+                            <span class="skill-tag">IDA Pro</span>
+                            <span class="skill-tag">Volatility</span>
+                        </div>
+                     </div>
+                     
+                     <!-- Creative & Design -->
+                     <div class="card p-6 rounded-lg border border-pink-500/30">
+                        <h3 class="text-lg font-bold text-pink-400 mb-4 flex items-center gap-2">
+                            <i class="fas fa-palette"></i> Creative Skills
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Adobe Creative Suite</span>
+                        </div>
+                     </div>
                  </div>
             </section>
-            
-            <!-- Education Section -->
-            <section id="education" class="section animated-section">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Education</h2>
-                 <div class="card p-5 rounded-lg">
-                    <div class="space-y-6">
-                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Masters of Science, Computer Forensics and Cyber Security</h3>
-                            <p class="text-gray-600">University of Greenwich - London, England (Jan 2025 - Jan 2026)</p>
+
+            <!-- Work Experience Section -->
+            <section id="experience" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Professional Experience</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                <div class="card p-6 rounded-lg border border-cyan-500/30">
+                    <div class="space-y-8">
+                        <div class="pb-6 border-b border-cyan-500/20">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-cyan-400">Shop Manager & IT Technician</h3>
+                                    <p class="text-pink-400 text-sm font-semibold">TechPoint</p>
+                                </div>
+                                <span class="text-xs text-gray-400">Hornchurch, Essex</span>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm">
+                                <li>Managed IT operations and customer support in retail tech environment</li>
+                                <li>Diagnosed and resolved technical issues across diverse platforms</li>
+                            </ul>
                         </div>
+                        
+                        <div class="pb-6 border-b border-cyan-500/20">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-cyan-400">Sales Assistant & IT Technician</h3>
+                                    <p class="text-pink-400 text-sm font-semibold">Tiktech</p>
+                                </div>
+                                <span class="text-xs text-gray-400">Hornchurch, Essex</span>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm">
+                                <li>Provided technical support and troubleshooting services</li>
+                                <li>Maintained inventory and coordinated with technical teams</li>
+                            </ul>
+                        </div>
+                        
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Bachelor of Science, Computer Science and Engineering</h3>
-                            <p class="text-gray-600">BRAC University - Dhaka, Bangladesh (Spring 2020 - Spring 2024)</p>
-                        </div>
-                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800">HSC Batch 2019</h3>
-                            <p class="text-gray-600">Ispahani Public School and College, Chittagong, Bangladesh</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">SSC Batch 2017</h3>
-                            <p class="text-gray-600">Nasirabad Govt. Boys High School, Chittagong, Bangladesh</p>
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-cyan-400">Graphic Designer</h3>
+                                    <p class="text-pink-400 text-sm font-semibold">Avalanche Digital</p>
+                                </div>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm">
+                                <li>Created visual designs and marketing materials for agency clients</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Personal Info, Other Skills -->
-            <section id="additional-info" class="section animated-section">
-                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="card p-5 rounded-lg h-full">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Personal Information</h3>
-                         <div class="space-y-3 text-gray-600">
-                            <div class="grid grid-cols-3 items-center gap-2">
-                                <p class="font-semibold text-gray-800">Email</p>
-                                <a href="mailto:adittabarua854@gmail.com" class="col-span-2 text-teal-600 hover:underline truncate">
-                                    adittabarua854@gmail.com
-                                </a>
-                            </div>
-                            <div class="grid grid-cols-3 items-center gap-2">
-                                <p class="font-semibold text-gray-800">Phone</p>
-                                <a href="tel:+4407443923977" class="col-span-2 text-teal-600 hover:underline truncate">
-                                    +440 7443 923977
-                                </a>
-                            </div>
-                            <div class="grid grid-cols-3 items-center gap-2">
-                                <p class="font-semibold text-gray-800">Location</p>
-                                <p class="col-span-2 text-gray-600 truncate">
-                                    Hornchurch, England
-                                </p>
-                            </div>
-                         </div>
+            <!-- Research Publications Section -->
+            <section id="publications" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Research Publications</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+
+                <div class="space-y-6">
+                    <!-- Thesis 1 - Primary Research -->
+                    <div class="card p-6 rounded-lg border-2 border-cyan-500/50 bg-opacity-50 tech-glow">
+                        <div class="mb-4">
+                            <span class="security-badge">Master's Thesis</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">
+                            <i class="fas fa-shield-alt mr-2"></i>Intelligent IoT Threat Detection Using Machine Learning
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            <strong>Supervisor:</strong> Dr. Anatolij Bezemskij, Lecturer, University of Greenwich
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Advanced machine learning techniques for detecting and classifying anomalous behavior in IoT networks. 
+                            Focuses on real-time threat detection and mitigation strategies for interconnected devices.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/Postgrad-Thesis.git"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
-                    <div class="card p-5 rounded-lg h-full">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Other Skills</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Leadership</li>
-                            <li>Communication</li>
-                            <li>Social Media Management</li>
-                            <li>Creativity</li>
-                            <li>Delivering Presentation</li>
-                            <li>Volunteering</li>
-                        </ul>
+
+                    <!-- Thesis 2 - Undergraduate Research -->
+                    <div class="card p-6 rounded-lg border border-pink-500/30">
+                        <div class="mb-4">
+                            <span class="security-badge">Bachelor's Thesis</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-400 mb-2">
+                            <i class="fas fa-heartbeat mr-2"></i>Edge-Optimized ML for Real-Time Health Monitoring
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            <strong>Supervisor:</strong> Dr. Jn Annatu Noor, Assistant Professor, BRAC University
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Developed machine learning models optimized for edge computing environments to enable real-time, personalized health monitoring systems.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/Undergrad-Thesis-.git"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
-                 </div>
+                </div>
             </section>
 
             <!-- Projects Section -->
-           <section id="projects" class="section animated-section">
-    <h2 class="text-3xl font-bold mb-6 text-gray-800">Projects</h2>
+            <section id="projects" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Projects</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
+                    <div class="card p-5 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition">
+                        <div class="flex items-start gap-3 mb-3">
+                            <i class="fas fa-robot text-cyan-400 text-xl mt-1"></i>
+                            <h3 class="text-lg font-bold text-cyan-400">Bangla Chat Bot using NLP</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            NLP-based conversational chatbot with Bangla language support for automated customer assistance.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/BanglaChatBot.git"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
 
-        <!-- Project 1 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">Bangla Chat Bot using NLP</h3>
-            <p class="text-gray-600 mb-3 mt-1">
-                Natural Language Processing based Bangla conversational chatbot.
-            </p>
-            <a 
-              href="https://github.com/SquarePants21/BanglaChatBot.git"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
+                    <!-- Project 2 -->
+                    <div class="card p-5 rounded-lg border border-pink-500/30 hover:border-pink-500/60 transition">
+                        <div class="flex items-start gap-3 mb-3">
+                            <i class="fas fa-play text-pink-400 text-xl mt-1"></i>
+                            <h3 class="text-lg font-bold text-pink-400">Netflix Clone</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Responsive web application built with HTML and CSS, replicating Netflix UI/UX design patterns.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/Netflix-Clone.git"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
 
-        <!-- Project 2 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">Netflix Clone</h3>
-            <p class="text-gray-600 mb-3 mt-1">Built using HTML and CSS.</p>
-            <a 
-              href="https://github.com/SquarePants21/Netflix-Clone.git"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
+                    <!-- Project 3 -->
+                    <div class="card p-5 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition">
+                        <div class="flex items-start gap-3 mb-3">
+                            <i class="fas fa-mobile-alt text-cyan-400 text-xl mt-1"></i>
+                            <h3 class="text-lg font-bold text-cyan-400">Birdwatcher App</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Android mobile application for bird species identification and tracking, built with Android Studio.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/Bird-Watcher-App.git"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
 
-        <!-- Project 3 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">Birdwatcher App</h3>
-            <p class="text-gray-600 mb-3 mt-1">Android app built using Android Studio.</p>
-            <a 
-              href="https://github.com/SquarePants21/Bird-Watcher-App.git"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
+                    <!-- Project 4 -->
+                    <div class="card p-5 rounded-lg border border-pink-500/30 hover:border-pink-500/60 transition">
+                        <div class="flex items-start gap-3 mb-3">
+                            <i class="fas fa-car text-pink-400 text-xl mt-1"></i>
+                            <h3 class="text-lg font-bold text-pink-400">Car Detection System</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            IoT-based vehicle detection system using Arduino Uno and various sensors for real-time monitoring.
+                        </p>
+                        <a 
+                          href="https://github.com/SquarePants21/car-detection-arduino"
+                          target="_blank"
+                          class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-semibold text-sm"
+                        >
+                          <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Project 4 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">Car Detection System</h3>
-            <p class="text-gray-600 mb-3 mt-1">
-                Arduino Uno based vehicle detection system using sensors.
-            </p>
-            <a 
-              href="https://github.com/yourusername/car-detection-arduino"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-
-             <!-- Publications Section -->
-            <section id="publications" class="section animated-section">
-    <h2 class="text-3xl font-bold mb-6 text-gray-800">Research</h2>
-
-    <div class="space-y-6">
-
-        <!-- Paper 1 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">
-                Intelligent IoT Threat Detection Using Machine Learning
-            </h3>
-            <p class="text-gray-600 mb-3 mt-1">
-                Supervisor: Dr. Anatolij Bezemskij, Lecturer, University of Greenwich
-            </p>
-
-            <a 
-              href="https://github.com/SquarePants21/Postgrad-Thesis.git"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-        <!-- Paper 2 -->
-        <div class="card p-5 rounded-lg">
-            <h3 class="text-lg font-bold text-gray-800">
-                Edge-Optimized Machine Learning Models for Real-Time Personalized Health Monitoring
-            </h3>
-            <p class="text-gray-600 mb-3 mt-1">
-                Supervisor: Dr. Jn Annatu Noor, Assistant Professor, BRAC University
-            </p>
-
-            <a 
-              href="https://github.com/SquarePants21/Undergrad-Thesis-.git"
-              target="_blank"
-              class="text-teal-600 font-semibold hover:underline text-sm flex items-center gap-2"
-            >
-              View Project on GitHub <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-
-             <!-- Extracurricular Section -->
+            <!-- Extracurricular & Leadership -->
             <section id="extracurricular" class="section animated-section">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Extracurricular Activities</h2>
-                 <div class="card p-5 rounded-lg">
-                    <ul class="list-disc list-inside text-gray-600 space-y-3">
-                        <li>Designer, IEEE BRACU Student Branch, Panel Member Of 2023-2024</li>
-                        <li>Senior Executive, Creative Department, Brac University Computer Club, 2021-2023</li>
-                        <li>Content Executive, Hult Prize At BRACU Official Event, 2022</li>
-                        <li>Director, Marketing & IT Department, BRAC University Monon Club, 2023-2024</li>
-                        <li>Reciter, 15th Convocation of BRAC University</li>
-                    </ul>
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Leadership & Activities</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                
+                <div class="card p-6 rounded-lg border border-cyan-500/30">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                                <i class="fas fa-users"></i> Leadership Roles
+                            </h3>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-pink-400 mt-1"></i>
+                                    <span><strong>Designer</strong>, IEEE BRACU Student Branch (2023-2024)</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-pink-400 mt-1"></i>
+                                    <span><strong>Senior Executive</strong>, Creative Department, BRACU Computer Club (2021-2023)</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check text-pink-400 mt-1"></i>
+                                    <span><strong>Director</strong>, Marketing & IT, BRAC University Monon Club (2023-2024)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-pink-400 mb-4 flex items-center gap-2">
+                                <i class="fas fa-star"></i> Achievements
+                            </h3>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-trophy text-cyan-400 mt-1"></i>
+                                    <span><strong>Content Executive</strong>, Hult Prize Event (2022)</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-trophy text-cyan-400 mt-1"></i>
+                                    <span><strong>Reciter</strong>, 15th Convocation of BRAC University</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-lightbulb text-cyan-400 mt-1"></i>
+                                    <span>Active in <strong>volunteering</strong> and community initiatives</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section animated-section">
+                <h2 class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">Get In Touch</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-cyan-400 to-pink-500 mb-8"></div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="mailto:adittabarua854@gmail.com" class="card p-6 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition text-center cursor-pointer hover:tech-glow">
+                        <i class="fas fa-envelope text-3xl text-cyan-400 mb-3"></i>
+                        <h3 class="font-bold text-cyan-400 mb-2">Email</h3>
+                        <p class="text-gray-400 text-sm break-all">adittabarua854@gmail.com</p>
+                    </a>
+                    
+                    <a href="tel:+4407443923977" class="card p-6 rounded-lg border border-pink-500/30 hover:border-pink-500/60 transition text-center cursor-pointer">
+                        <i class="fas fa-phone text-3xl text-pink-400 mb-3"></i>
+                        <h3 class="font-bold text-pink-400 mb-2">Phone</h3>
+                        <p class="text-gray-400 text-sm">+44 (0) 744 392 3977</p>
+                    </a>
+                    
+                    <div class="card p-6 rounded-lg border border-purple-500/30 text-center">
+                        <i class="fas fa-map-marker-alt text-3xl text-purple-400 mb-3"></i>
+                        <h3 class="font-bold text-purple-400 mb-2">Location</h3>
+                        <p class="text-gray-400 text-sm">Hornchurch, Essex, England</p>
+                    </div>
                 </div>
             </section>
 
